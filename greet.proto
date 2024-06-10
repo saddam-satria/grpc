@@ -1,0 +1,18 @@
+
+syntax = "proto3";
+
+package greet;
+
+option go_package = "model/greet"; 
+
+message Hello{
+    string name = 1;
+}
+
+message Result {
+    string message=1;
+}
+
+service Greet{
+    rpc SayHello(Hello) returns (Result){}
+}

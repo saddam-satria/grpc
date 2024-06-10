@@ -1,0 +1,2 @@
+protoc greet.proto --go_out=. --go-grpc_out=.
+python -m grpc_tools.protoc -I. --python_out=model/greet --grpc_python_out=model/greet greet.proto
